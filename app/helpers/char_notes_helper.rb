@@ -1,0 +1,2 @@
+module CharNotesHelper
+end

@@ -1,0 +1,1 @@
+json.partial! "char_notes/char_note", char_note: @char_note

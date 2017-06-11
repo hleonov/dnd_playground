@@ -1,0 +1,32 @@
+
+<% provide(:title, "Character Notes") %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Character-related Notes</h1>
+
+<table width=100%>
+  <thead>
+    <tr>
+      <th>Character</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @char_notes.each do |char_note| %>
+      <tr class="<%= cycle('oddrow', 'evenrow') -%>">
+        <td><%=Character.find(char_note.character_id).name %></td>
+        <td><%= char_note.content %></td>
+        <td><%= link_to 'Show', char_note %></td>
+        <td><%= link_to 'Edit', edit_char_note_path(char_note) %></td>
+        <td><%= link_to 'Destroy', char_note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Char note', new_char_note_path %>

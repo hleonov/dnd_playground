@@ -1,0 +1,1 @@
+json.array! @char_notes, partial: 'char_notes/char_note', as: :char_note

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<h2> <%=Character.find(@char_note.character_id).name %>'s note </h2>
+
+<p>
+  <strong>Content:</strong>
+  <%= @char_note.content %>
+</p>
+
+<!-- <p>
+  <strong>Character:</strong>
+  <%= @char_note.character_id %>
+</p> -->
+<br>
+<%= link_to 'Edit', edit_char_note_path(@char_note) %> |
+<%= link_to 'Back', char_notes_path %>
